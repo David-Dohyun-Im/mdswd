@@ -1,0 +1,168 @@
+The Future of App Development
+1
+
+Speaker
+Gaspar Garcia
+Head of AI Research, Vercel
+Tech Lead, v0
+Data Pipelines
+Training + finetuning
+Agent Development
+Web Infrastructure
+2
+
+Speaker
+Gaspar Garcia
+Stanford Class 2016
+BS, Computer Science Theory
+MS, Computer Science AI
+3
+
+So what is v0?
+Free for students → https://v0.app/students
+4
+
+5
+
+Most likely its not
+6
+
+Fail fast, fail often
+Accelerate the learning moments of product development
+7
+
+From Idea to Production in Minutes
+Natural Language Input
+Describe your UI vision in plain English
+AI Processing
+Advanced models generate production-ready code
+Live Preview
+Instantly see and iterate on your interface
+One-Click Deploy
+Push to production without friction
+8
+
+9
+
+The Developer Landscape is Shifting
+v0's rapid adoption demonstrates a fundamental change in how teams approach frontend development. The platform has resonated across company sizes—from startups moving at breakneck speed to enterprises modernizing legacy systems.
+This isn't just about speed; it's about democratizing technical capability and enabling new forms of collaboration between engineering, design, and product teams.
+10
+
+Breaking Down Silos
+AI-Powered Development Across All Personas
+Product Managers
+Validate concepts quickly without waiting for engineering cycles. Transform PRDs into interactive prototypes for stakeholder review.
+Designers
+Bridge the gap between design tools and production code. See your vision implemented instantly with full responsiveness.
+Engineers
+Focus on complex logic while AI handles boilerplate. Accelerate feature delivery and maintain quality standards.
+Founders
+Build and launch MVPs without large engineering teams. Iterate based on user feedback in real-time.
+11
+
+How its built
+12
+
+Inside v0's Engine
+How Real-World Agent Systems Work
+1
+Intent Understanding
+Natural language processing extracts structured requirements from conversational input, identifying components, layouts, interactions, and data flows.
+2
+Context Assembly
+The system gathers relevant information: design system tokens, existing components, API schemas, and accessibility requirements.
+3
+Code Generation
+Large language models generate production-quality React components with proper TypeScript types, responsive design, and best practices.
+4
+Validation & Testing
+Automated checks ensure accessibility compliance, responsive behavior, and code quality before presenting to the user.
+5
+Human-in-the-Loop
+Engineers review, refine, and provide feedback that trains the model for future generations.
+13
+
+Agents are Workflows
+14
+
+https://ai-sdk.dev/docs/agents/overview
+15
+
+But they're still probabilistic systems
+16
+
+Give them Frameworks
+17
+
+18
+
+Corrections and Fine-Tuning
+19
+
+Key limitations
+Model knowledge can quickly become outdated for topics that change fast.
+Frontier model labs won't create custom pipelines just for emitting proper code for Next.js 16 web applications.
+20
+
+Stream Manipulation
+The solution we created is a subsystem that lets us listen to and capture the LLM's output stream before it reaches the user
+Sometimes, just adjusting the prompt isn't enough..
+21
+
+Stream Manipulation
+
+22
+
+Stream Manipulation
+
+23
+
+Training + Fine-Tuning
+24
+
+Training + Fine-Tuning
+https://vercel.com/blog/v0-composite-model-family
+25
+
+The Broader AI Tooling Landscape
+A Cambrian Explosion of AI Dev Tools
+v0 exists within an ecosystem of specialized AI development tools, each targeting different aspects of the software lifecycle. From code completion to testing, deployment to monitoring—AI is transforming every stage.
+The key differentiator? End-to-end workflows that handle entire features, not just autocomplete suggestions.
+1
+Code Assistants
+Vercel Agent, GitHub Copilot, Cursor, and similar tools for real-time code suggestions
+2
+Frontend Builders
+Visual development platforms
+3
+Testing & QA
+Automated test generation and visual regression systems
+4
+DevOps Automation
+AI-driven deployment, monitoring, and incident response
+26
+
+Real-World Impact
+How Companies Are Adopting Agentic Workflows
+Startup Velocity
+Early-stage companies ship MVPs in days instead of months. 
+Net-new products / features
+Changes to existing features
+Enterprise Modernization
+Large organizations use v0 to prototype internal tools and customer-facing features before committing engineering resources.
+Faster stakeholder alignment
+Reduced development waste
+Agency Efficiency
+Design agencies deliver interactive prototypes to clients within hours of kickoff meetings, accelerating the feedback loop.
+5x more concepts per sprint
+Higher client satisfaction
+27
+
+The Road Ahead
+What's Next for AI-Driven Development
+28
+
+Thank you
+https://x.com/gaspargarcia_
+29

@@ -1,0 +1,144 @@
+The Modern Software Developer
+CS146S 
+Stanford University, Fall 2025
+Mihail Eric
+themodernsoftware.dev
+
+Automated UI and App Building
+themodernsoftware.dev
+
+This is not the “vibe coding” class
+themodernsoftware.dev
+Because I’m a software development purist
+
+…except today
+themodernsoftware.dev
+
+Modern SaaS development has focused on web apps for over two decades
+
+Why
+themodernsoftware.dev
+Salesforce in 1999 often considered first SaaS platform
+
+LAMP
+MERN
+JAM
+Serverless
+
+
+The Old Days
+themodernsoftware.dev
+LAMP Stack
+Technologies: Linux (OS), Apache (Web Server), MySQL (Database), PHP (Backend)
+Description: Classic open-source web stack for dynamic websites and traditional web apps.
+
+MERN Stack
+Technologies: MongoDB, Express.js, React.js, Node.js
+Description: Full JavaScript stack for building modern, interactive single-page web apps (SPAs).
+
+MEVN Stack
+Technologies: MongoDB, Express.js, Vue.js, Node.js
+Description: JavaScript-based stack using Vue instead of React — lightweight, flexible, and easy to learn.
+
+Serverless Stack
+Technologies: Frontend (React/Vue/Svelte), Backend (AWS Lambda, Google Cloud Functions), Database (DynamoDB, Firebase)
+Description: Cloud-native stack — runs backend logic on-demand without managing servers; ideal for scalable, event-driven apps.
+
+
+The Old Days
+themodernsoftware.dev
+client-side
+server-side
+database
+MERN
+
+The Old Days
+themodernsoftware.dev
+JAM
+Components:
+JavaScript – for dynamic functionalities
+APIs – to connect backend services
+Markup – prebuilt static HTML
+Usage: Used for static sites and modern web apps. Common tools include Gatsby, Next.js, or Nuxt.js with headless CMSs like Contentful or Sanity.
+
+
+The Old Days
+themodernsoftware.dev
+AWS Stack
+
+Take #1: Visual Low-code/No-code
+
+Wix
+Squarespace
+Webflow
+
+themodernsoftware.dev
+
+
+The New AI World
+
+Lovable
+Replit
+Vercel v0
+Base44
+Cursor/Claude Code/etc
+
+themodernsoftware.dev
+
+
+What Has Changed
+Prompt your way to a fully fledged app
+Engineers are becoming more cross-functional
+Design
+Product management
+Anyone can build an app now
+More user-friendly than 1st generation no-code platforms like Webflow, Wix, Squarespace
+
+themodernsoftware.dev
+
+
+Let’s Make An App Right Now
+themodernsoftware.dev
+Bolt example with FE/BE
+Make salsa partner finder
+Additional changes after initial generation
+Update color palette
+Iconography
+Typography
+—-
+This looks good. I want to update the color pallette to follow the following colors:
+#EF8354
+#660000
+#EFCA08
+
+
+App Builder Architecture
+
+
+themodernsoftware.dev
+WebContainer
+Webcontainer running arbitrary generated code
+
+
+App Builder System Prompt
+
+
+themodernsoftware.dev
+Explicitly requests only established, well-known technologies/frameworks
+https://gist.github.com/curran/753aa62fd99b7df8f858743d605f1d02
+https://app.prompthub.us/prompthub/bolt-agent-system-prompt
+boltartifact/Boltaction to designate things that should happen (file creation, file running, etc) in the webcontainer
+
+
+Limitations
+Everything is awesome when it works but once things break we’re back at square 1
+Prompts are just suggestions. Not every user understands that
+Security has been an issue in the past
+How do we prevent all these apps from looking the same?
+How complex can these apps realistically get?
+
+themodernsoftware.dev
+
+themodernsoftware.dev
+Questions?
+

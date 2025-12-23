@@ -1,0 +1,206 @@
+IDE ❤️ Agents
+An opinionated guide to AI coding in 2025
+CS146S: The Modern Software Developer – Oct 10, 2025
+
+
+
+Silas Alberti
+Founding Team @ CognitionPrev: Stanford PhD Student
+
+Agenda
+Overview of the AI tooling landscape
+Synchronous vs. asynchronous tools
+The 2025 coding workflow 
+When to hand-off from sync to async?
+How to combine tools like Devin & Windsurf
+Where are we headed?
+
+Three Eras of AI Coding Tools
+Local Development ⇒ Collaborative Cloud Agents
+GitHub Copilot: speed up coding
+Code Completion
+1
+AI IDEs: single-player task completion
+IDE Automation
+2
+Image 2
+AI agents: scale workflows in parallel
+AI Software Engineer
+3
+Overview
+
+Three Eras of AI Coding Tools
+
+Local Development ⇒ Collaborative Cloud Agents
+GitHub Copilot: speed up coding
+Code Completion
+1
+AI IDEs: single-player task completion
+IDE Automation
+2
+Image 2
+AI agents: scale workflows in parallel
+AI Software Engineer
+3
+Overview
+~10% efficiency gain
+~20% efficiency gain
+6-12x efficiency gain
+Local, Synchronous
+Cloud, Asynchronous
+
+Synchronous vs. Asynchronous
+
+sync: single-threaded, human-in-the-loop, your attention is focused on one task=> AI agent works for 20 seconds - 1.5 minutes
+
+
+
+Synchronous vs. Asynchronous
+
+sync: single-threaded, human-in-the-loop, your attention is focused on one task=> AI agent works for 20 seconds - 1.5 minutes
+
+async: multi-threaded, human delegates to AI, switches attention between multiple tasks=> AI agent works for 10 minutes - multiple hours
+
+Local
+Cloud
+Sync
+Async
+
+Local
+Cloud
+Sync
+Async
+
+Local
+Cloud
+Sync
+Async
+
+Local
+Cloud
+Sync
+Async
+DeepWiki
+
+Overview
+Cloud + Async enables 10x parallelism 
+Boost individual speed.
+Local IDE
+Local IDE
+Local IDE
+Users
+Laptops
+Env
+Users
+Devins
+Env
+In VPC
+Local AI IDEs
+Unlimited Devins for parallel capacity.
+Cloud AI Agents
+Local • Synchronous • 1-to-1 • Isolated Knowledge
+Cloud • Asynchronous • 1-to-Many • Organizational Knowledge
+How Devin delivers workflow autonomy
+Plan — engineer in the loop • Ask Devin questions in Search / Wiki to surface the right files, APIs, tests • Clarify scope → Devin writes a step-by-step plan • Time cost ≈ minutes
+Build — Devin in the loop • Devin spins up its isolated workspace (shell + editor + browser) • Plans → executes → tests → iterates until the task is green • Runs fully async; you move on to other work
+Review — engineer back in the loop • Devin opens a clean PR with passing tests and a change summary • You review, comment, or merge — Devin can revise on request • Human effort ≲ 15 % of the original task
+Result: one clear hand-off, 6-12× engineer leverage, zero IDE disruption.
+
+Using async agents is a hard but learnable skill
+Managing async agents can unlock 10x gains……but most people use sync agents.
+
+Using async agents is a hard but learnable skill
+Managing async agents can unlock 10x gains……but most people use sync agents.
+Why?
+Turns out management & delegation is a difficult skill to master – whether it’s humans or agents.
+Requires ability to cycle between multiple tasks and quickly understanding new context
+
+Semi-Async: The awkward middle
+Sync
+Async
+“Semi-Async”
+5s		10s		30s		1m		3m		5m		10m		1h		3h
+Flow Barrier
+
+Semi-Async: The awkward middle
+Sync
+Async
+“Semi-Async”
+5s		10s		30s		1m		3m		5m		10m		1h		3h
+Avoid!Too slow for staying in flow.Too short for multi-tasking.
+
+Flow Barrier
+
+Semi-Async: The awkward middle
+Sync
+Async
+“Semi-Async”
+5s		10s		30s		1m		3m		5m		10m		1h		3h
+Avoid!Too slow for staying in flow.Too short for multi-tasking.
+
+Make fasterto preserve flow
+Trade time for higher intelligence
+Flow Barrier
+
+Planning
+Coding
+Testing
+
+Planning
+Coding
+Testing
+sync
+async
+sync
+
+Planning with Windsurf & Devin
+DeepWiki
+Ask Devin
+Codemaps
+DeepWiki in Windsurf
+
+Delegate the coding to the agent
+
+Delegate the coding to the agent
+
+Testing the agent’s changes
+Common workflow:1. Delegate task to Devin (async)2. Test & refine changes in Windsurf (sync)
+
+
+
+Testing the agent’s changes
+Common workflow:1. Delegate task to Devin (async)2. Test & refine changes in Windsurf (sync)
+
+Future outlook:If async agents could test autonomously, the leverage increases.This is slowly starting to become a reality.
+
+Planning
+Coding
+Testing
+Where are we headed?
+Today:
+
+Planning
+Coding
+Testing
+Where are we headed?
+Planning
+Coding
+Testing
+Today:
+Future:
+
+Where are we headed?
+The human engineer as the agent manager
+Leveraging sync tools to solve the most difficult problems
+Leveraging async tools to achieve 10x leverage
+
+Where are we headed?
+The human engineer as the agent manager
+Leveraging sync tools to solve the most difficult problems
+Leveraging async tools to achieve 10x leverage
+Valuable skills for the future:
+Delegation & multi-threading
+Code reading
+Planning, scoping, architecting
+
+Thank you!

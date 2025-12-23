@@ -1,0 +1,181 @@
+The Modern Software Developer
+CS146S 
+Stanford University, Fall 2025
+Mihail Eric
+themodernsoftware.dev
+
+themodernsoftware.dev
+Guest Lecture - 10/31/25
+CEO of Semgrep, Isaac Evans
+
+
+AI Testing and Security
+themodernsoftware.dev
+
+Software errors can dash user trust in a product/company and incur huge financial costs 
+When an LLM is writing most of your code, you need extensive guardrails to prevent those errors
+
+
+Why
+themodernsoftware.dev
+
+
+Existing threat landscape
+SQL injections
+Cross-site scripting
+Broken authentication
+Insecure direct object references
+Security misconfigurations
+Sensitive data exposure
+
+themodernsoftware.dev
+
+
+Vulnerability detection techniques
+SAST
+DAST
+SCA
+
+themodernsoftware.dev
+Cover code + runtime + dependencies
+
+SAST
+Static Application Security Testing 
+White box testing technique
+Analyzes binaries and source code
+Happens early in software development life cycle when much cheaper to identify and correct
+Identify vulnerabilities like SQL injections, command injections, cross-site scripting
+Techniques
+Codebase scan with pattern matching
+themodernsoftware.dev
+Give examples of SAST tools
+Bandit
+Semgrep
+Eslint + extensions
+
+DAST
+Dynamic Application Security Testing 
+Black box testing technique
+Mimic actions of real-world hackers to uncover vulnerabilities
+Can happen throughout SDLC and offers fewer false positives
+Identify vulnerabilities like SQL injections, broken authentication, cross-site scripting
+Techniques
+Input fuzzing
+Manipulating session tokens
+Configuration/header testing
+Brute force rate-limit tests
+themodernsoftware.dev
+Give examples of DAST tools
+
+
+SCA
+Software Composition Analysis 
+Deep analysis of OSS packages used by application
+Perform analysis of package managers, infrastructure-as-code, pull images to find vulnerabilities
+Techniques
+Analyze package metadata for dependencies
+Transitive dependency resolution
+Match against DB of vulnerabilities 
+Binary/artifact scanning
+themodernsoftware.dev
+
+
+What has changed
+themodernsoftware.dev
+Bad: new AI agent attack vectors
+Good: new techniques for improving SAST/DAST/SCA
+
+
+
+
+
+New AI agent attack vectors
+themodernsoftware.dev
+Prompt injection
+Hidden or misleading instructions to gen AI system to make it deviate from intended behavior
+
+
+
+
+themodernsoftware.dev
+
+
+
+themodernsoftware.dev
+Extracting system prompts from ai agents (AMP code in this case)
+
+New AI agent attack vectors
+themodernsoftware.dev
+Tool misuse
+Manipulate agent through deceptive prompts to abuse its integrated tools
+
+
+themodernsoftware.dev
+https://embracethered.com/blog/posts/2025/amp-agents-that-modify-system-configuration-and-escape/
+
+New AI agent attack vectors
+themodernsoftware.dev
+Code attacks
+Exploit agent’s ability to execute code to gain unauthorized access to execution environment
+
+
+
+
+themodernsoftware.dev
+
+
+
+New AI agent attack vectors
+themodernsoftware.dev
+Prompt injection
+Hidden or misleading instructions to gen AI system to make it deviate from intended behavior
+Tool misuse
+Manipulate agent through deceptive prompts to abuse its integrated tools
+Intent breaking
+Manipulate agent’s plan to redirect actions away from original intent
+Identity spoofing
+Exploit compromised authentication to pose as legitimate agents
+Code attacks
+Exploit agent’s ability to execute code to gain unauthorized access to execution environment
+
+
+
+
+What has changed
+themodernsoftware.dev
+“Shift left” security is more accessible than ever
+LLMs can be introduced in a workflow to spot issues
+Automated penetration testing
+
+
+
+How LLMs are used for security and testing
+themodernsoftware.dev
+
+Limitations
+themodernsoftware.dev
+In AI SAST, false positive rates are incredibly high
+Claude Code/Codex can be 50-100% depending on the vulnerability
+Compare to 50+% for traditional SAST techniques
+Existing benchmarks are often unrealistic so hard to evaluate LLM
+Nondeterministic analysis	
+Run the same prompt multiple times and get different results → how do you know you’re catching all vulnerabilities?
+Context rot
+Not all context is created equally
+Compaction
+Summarize so that things fit into context
+
+
+
+
+Open Questions
+themodernsoftware.dev
+How to reduce false positives and hallucinations in vulnerability detection?
+How do we verify that LLM-generated patches are secure and don’t introduce regressions?
+How can LLMs explain why they flag a vulnerability or propose a fix?
+What are the right benchmarks for measuring LLMs’ AppSec performance?
+How should LLMs be embedded in CI/CD without overwhelming teams with noise?
+Who is accountable if an AI-generated patch introduces a vulnerability?
+
+
+

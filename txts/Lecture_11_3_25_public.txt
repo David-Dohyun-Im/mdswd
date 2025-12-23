@@ -1,0 +1,173 @@
+The Modern Software Developer
+CS146S 
+Stanford University, Fall 2025
+Mihail Eric
+themodernsoftware.dev
+
+themodernsoftware.dev
+Guest Lecture - 11/7/25
+CPO of Graphite, Tomas Reimers
+
+Pause for questions
+
+AI Code Review
+themodernsoftware.dev
+
+themodernsoftware.dev
+
+
+Software code review is one of the highest leverage activities you can do to become a better engineer and improve overall team code quality
+
+
+Why
+themodernsoftware.dev
+
+
+Statistics
+Code review has 55-60% error detection rate compared to 25-45% for different testing modes
+Study of errors on programs without/with code review reported 4.5 → 0.82 errors/100 lines
+Study at AT&T showed code review had 14% increase in productivity and 90% decrease in defects
+
+themodernsoftware.dev
+Source: Coding Horror
+
+
+What to Catch
+Logic and correctness errors
+
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+What to Catch
+Readability and maintainability
+
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+What to Catch
+Performance
+
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+What to Catch
+Security
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+What to Catch
+Best practices
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+Idioms in your codebase
+Database access patterns (i.e. use this service rather than a direct DB lookup)
+
+themodernsoftware.dev
+Source: Blake Smith
+Helps team members adapt their mental model of the system as it’s changing
+Ensures the change correctly solves the problem
+Opens discussion for strengths and weaknesses of a design
+Catches bugs before they get to production
+Keeps the code style and organization consistent
+
+
+What’s a Good Code Review
+themodernsoftware.dev
+This won’t work
+vs
+I see your new method matches the existing style in this file, taking [X] parameters. Having that many parameters hurts readability and implies the function is doing too much. What do you think about refactoring this method and the existing ones in a later pull request to reduce how many parameters they take?
+Provides specific details.
+References specific code or issues.
+Suggests a resolution to the problem.
+Cites evidence or provides an explanation
+
+
+The New AI World
+Graphite (guest lecture 11/7)
+Greptile
+Coderabbit
+Claude Code / Codex
+
+themodernsoftware.dev
+
+
+What Has Changed
+themodernsoftware.dev
+Efficiency 
+Consistency	
+Knowledge sharing	
+Reduced cognitive load
+Continuous improvement
+Holistic understanding of your code
+
+Automation reduces review time and catches issues early
+Developers learn best practices through AI suggestions
+AI applies the same standards across all code reviews
+AI handles routine checks, letting humans focus on complex logic
+AI systems improve over time with more data
+modern AI code review tools go deeper, offering contextual analysis and pattern recognition
+
+
+themodernsoftware.dev
+Source: Greptile
+Automation reduces review time and catches issues early
+Developers learn best practices through AI suggestions
+AI applies the same standards across all code reviews
+AI handles routine checks, letting humans focus on complex logic
+AI systems improve over time with more data
+modern AI code review tools go deeper, offering contextual analysis and pattern recognition
+
+
+themodernsoftware.dev
+Source: Graphite
+Source: https://www.youtube.com/watch?v=TswQeKftnaw
+
+Let’s See AI Code Review in Action
+themodernsoftware.dev
+Graphite example
+Developers learn best practices through AI suggestions
+AI applies the same standards across all code reviews
+AI handles routine checks, letting humans focus on complex logic
+AI systems improve over time with more data
+modern AI code review tools go deeper, offering contextual analysis and pattern recognition
+
+
+Limitations
+themodernsoftware.dev
+More configuration/setup
+False positives
+Have to train the system → continuous learning
+Can’t yet catch the idioms and repo best practices
+Can’t handle complex business logic and architecture decisions
+But that’s where humans are still needed
+Must be extra cautious with security changes
+Often misses edge cases
+Code review is more important now than ever with AI coding systems
+You own the code that is merged and shipped, no blaming of the AI
+Need to explicitly tell it what not to review and aspects of your code patterns/idioms
+Be especially mindful of user input, authentication, file operations, network requests
+
+
+
+themodernsoftware.dev
+Questions?
+

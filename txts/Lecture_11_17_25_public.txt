@@ -1,0 +1,189 @@
+The Modern Software Developer
+CS146S 
+Stanford University, Fall 2025
+Mihail Eric
+themodernsoftware.dev
+
+themodernsoftware.dev
+Guest Lecture - 11/21/25
+Member of Technical Staff Resolve
+Milind Ganjoo
+
+CTO of Resolve
+Mayank Agarwal
+
+Creator of opentelemetry
+Deepmind staff MLE
+
+AI DevOps
+themodernsoftware.dev
+
+Monitoring software systems in production remains a mission-critical task
+Coding represents just 30 percent of engineering time
+Harder 70 percent is running that code in production where complexity, tool silos, knowledge gaps, and interdependencies all collide
+Managing production often requires laborious software triaging handled by SREs
+
+
+Why
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+The Old World
+Responsibilities of SRE
+Operational monitoring
+on-call, troubleshooting, infrastructure management and security
+Incident resolution involves piecing together info from many different sources and teams
+Maintain oftentimes outdated runbooks for how to resolve issues
+Shift to cloud-native architectures with containerized workloads and Kubernetes has introduced more data, dependencies, and complexity across systems
+SREs often get burned out due to on-call shifts
+
+themodernsoftware.dev
+estimates that downtime and service degradation cost the Global 2000 about $400 billion annually
+
+
+Principles of Infrastructure and DevOps 
+Four golden signals of monitoring
+Latency
+Errors
+Traffic
+Requests/sec
+Saturation
+Monitor production traces
+
+themodernsoftware.dev
+Latency: Measures how long it takes to service a request. Track both successful and failed requests separately, since failed requests (like HTTP 500s) can distort averages. Slow errors are especially concerning and should be monitored closely.
+Traffic: Represents system demand, typically measured as requests per second or equivalent units depending on the system (e.g., sessions for streaming, transactions for databases).
+Errors: The rate of failed requests, whether explicit (e.g., HTTP 500s), implicit (wrong content despite 200 OK), or policy-based (e.g., exceeding response-time commitments). Use multiple layers of monitoring to catch different failure types.
+Saturation: Indicates how "full" your system is — tracking constrained resources like CPU, memory, or I/O. Systems often slow before hitting 100% utilization, so define safe thresholds. Monitor for signs of impending limits, such as rising latency or storage nearing capacity.
+
+
+themodernsoftware.dev
+At 3:12 am you get a ping from PagerDuty that you’re seeing a spike in 500s on your database queries. What do we do?
+What do we do? Ask for thoughts from the audience
+
+A Potential Playbook
+Acknowledge and assess
+Check DB + app
+Identify recent changes
+Localize blast radius
+Execute mitigations
+Stabilize + monitor
+Communicate
+Document
+
+themodernsoftware.dev
+Acknowledge & Assess
+Acknowledge in PagerDuty
+Confirm severity: check app + DB dashboards
+Identify whether impact is partial or full outage
+
+Check the Golden Signals (DB First)
+Connections: maxed? stuck? sudden drops?
+Latency: P95 spikes? slow queries?
+Errors: timeouts? refused connections? aborted transactions?
+Saturation: CPU, IOPS, locks, memory, replication lag
+
+Look for What Changed
+Recent deploy?
+DB migration?
+Config / feature flag change?
+Autoscaling event? → Roll back / revert immediately if correlated.
+
+Localize the Failure
+All queries or specific ones?
+Read vs write?
+Primary vs replicas?
+One shard/instance or all?
+App side (pools/timeouts) vs DB side (load/locks)?
+
+Apply Fast Mitigations
+Connection issues: restart app pods, reduce concurrency
+DB saturation: disable heavy jobs, throttle traffic, route reads to replicas
+Bad/slow queries: disable feature/endpoint, enable cached/degraded mode
+Replica lag: route reads to primary, restart replica
+Unhealthy node: restart only replicas; escalate for primary
+
+Stabilize & Monitor
+Watch 500 rate, DB latency, and traffic normalize
+Ensure no retry storms or cascading failures
+Validate app health checks recover
+
+Communicate
+Brief updates: issue → action → current status
+Update every 10–15 minutes during active incident
+
+Close Out
+Capture timeline
+Identify root cause driver
+Log follow-ups: query fixes, indexing, scaling, retry tuning, capacity review
+
+
+themodernsoftware.dev
+
+
+Metrics Tracked
+Mean-time-to-repair (MTTR)
+How many engineers are pulled into incident
+Reported SLA for customers
+
+themodernsoftware.dev
+Reported SLA is not explicitly tracked
+
+The New AI World
+Resolve AI (guest lecture 11/21)
+DataDog Bits AI Agent
+Splunk Observability Assistant
+
+themodernsoftware.dev
+
+
+Characteristics of an AI SRE
+Dynamic mapping of a knowledge graph
+Agentic system across observability stack and clouds
+Generates real-time narratives of what is happening, pinpoints likely root causes with supporting evidence, and recommends prescriptive remediation steps
+Heavy emphasis on explainability and auditability of predictions/reasoning
+
+themodernsoftware.dev
+
+
+themodernsoftware.dev
+
+
+What Has Changed
+themodernsoftware.dev
+AI promises to scale out organizational and service level knowledge 
+Information is not siloed to the only engineers who know the undocumented dependencies, brittle legacy services, and quirks that only surface during high-stakes incidents. 
+
+What Has Changed
+themodernsoftware.dev
+Automation reduces review time and catches issues early
+Developers learn best practices through AI suggestions
+AI applies the same standards across all code reviews
+AI handles routine checks, letting humans focus on complex logic
+AI systems improve over time with more data
+modern AI code review tools go deeper, offering contextual analysis and pattern recognition
+
+
+Let’s See AI SRE in Action
+themodernsoftware.dev
+Observability, working theories
+SPan information
+Heavily evidence-based 
+Chat for more dynamic querying of information
+
+
+Limitations
+themodernsoftware.dev
+Complexity of incidents that can be resolved
+Heterogeneity of modern production stacks
+Ability to remediate actual code based on what has been detected
+Eventual goal though all providers are starting with root cause analysis
+Good root cause analysis requires good monitoring gardening
+Security could be a new attack vector
+
+themodernsoftware.dev
+Questions?
+
